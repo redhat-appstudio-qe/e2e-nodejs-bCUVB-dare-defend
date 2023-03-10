@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-s0il
+  namespace: e2e-demos-qpvz-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:0dc228d0488ca85140e0c26d95f3eab13b5df6c1783aa3e20da1217df1c9d86e
+        name: my-nodejs
+        resources: {}
+status: {}
